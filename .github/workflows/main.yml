@@ -38,7 +38,7 @@ jobs:
         run: echo "client has chnaged"
   
 
-        server:
+  server:
           needs: check-changes
           runs-on: ubuntu-latest
           if: needs.check-changes.outputes.server_changed =='true'
