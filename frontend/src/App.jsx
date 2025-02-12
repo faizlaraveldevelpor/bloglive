@@ -1,6 +1,6 @@
 import {Route, Routes} from 'react-router-dom'
 import { lazy } from 'react'
-const Layout=lazy(()=>import('./Pages/ALL_models'))
+
 const Single_Blog_page=lazy(()=>import('./Pages/Single_Blog_page'))
 const Create_blog=lazy(()=>import('./Pages/Admin_pages/Create_blog'))
 const All_blogs=lazy(()=>import('./Pages/All_blogs'))
@@ -13,6 +13,7 @@ const Delete=lazy(()=>import('./Compunents/Admin/Delete'))
 const Create_cetagory=lazy(()=>import('./Compunents/Admin/Create_cetagory'))
 const Delete_Cetagory=lazy(()=>import('./Compunents/Delete_Cetagory'))
 const All_comments=lazy(()=>import('./Compunents/Admin/All_comments'))
+const Layout=lazy(()=>import('./Pages/ALL_models'))
 const About=lazy(()=>import('./Pages/About'))
 const CreateAbout=lazy(()=>import('./Pages/Admin_pages/About'))
 const Privacy=lazy(()=>import('./Pages/Privacy_policy'))
