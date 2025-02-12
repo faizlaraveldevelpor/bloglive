@@ -26,8 +26,8 @@ const Search=lazy(()=>import('./Pages/Search'))
 const User_profile_page=lazy(()=>import('./Pages/User_profile_page'))
 const User_private_routes=lazy(()=>import('./Pages/User_private_routes'))
 const Show_draft=lazy(()=>import('./Pages/Show_draft'))
-const All_users=lazy(()=>import("./Pages/Admin_pages/All_users"))
 const Blogs=lazy(()=>import('./Pages/Blogs'))
+const All_users=lazy(()=>import("./Pages/Admin_pages/All_users"))
 
 function App() {
   return (
