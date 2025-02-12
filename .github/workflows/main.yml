@@ -21,8 +21,8 @@ jobs:
       uses: dorny/paths-filter@v3
       with:
        filters: 
-        cient:
-         'client/**'
+         cient:
+           - 'client/**'
        
 
     - name: Check for chenges in server

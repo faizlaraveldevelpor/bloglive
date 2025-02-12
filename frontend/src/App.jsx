@@ -22,12 +22,13 @@ const Create_Disclamer=lazy(()=>import('./Pages/Admin_pages/Create_Disclamer'))
 const Disclamer=lazy(()=>import('./Pages/Disclamer'))
 const Termcontions=lazy(()=>import('./Pages/Admin_pages/Term&contions'))
 const Term=lazy(()=>import('./Pages/Term'))
+const Search=lazy(()=>import('./Pages/Search'))
 const User_profile_page=lazy(()=>import('./Pages/User_profile_page'))
 const User_private_routes=lazy(()=>import('./Pages/User_private_routes'))
 const Show_draft=lazy(()=>import('./Pages/Show_draft'))
 const All_users=lazy(()=>import("./Pages/Admin_pages/All_users"))
 const Blogs=lazy(()=>import('./Pages/Blogs'))
-const Search=lazy(()=>import('./Pages/Search'))
+
 function App() {
   return (
     <div className=''>
