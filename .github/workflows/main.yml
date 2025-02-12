@@ -20,7 +20,9 @@ jobs:
       id:   client_changed
       uses: dorny/paths-filter@v3
       with:
-       filters: 'client/**'
+       filters: 
+        cient:
+         'client/**'
        
 
     - name: Check for chenges in server
