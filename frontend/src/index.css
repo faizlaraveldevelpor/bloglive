@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Outfit:wght@100..900&display=swap');
+
+
+
+  .animation {
+  
+    animation-name: example;
+    animation-duration: 2s;
+    
+  }
+
+  @keyframes  example {
+
+    50%  {transform: translateY(50%);}
+    100% {transform: translateY(0%);}
+  }
+
+
+  .cusSc::-webkit-scrollbar {
+    width: 8px;
+    margin-top: 1px;
+  }
+   
+  .cusSc::-webkit-scrollbar-track {
+    
+  }
+   
+  .cusSc::-webkit-scrollbar-thumb {
+    background-color: rgba(50, 48, 48, 0.845);
+    outline: 1px solid slategrey;
+  
+  }
+  img{
+    border-radius: 3%;
+  }
+
+
+  @font-face {
+    font-family: 'CustomFont';
+    src: url('./assets//Giaza.otf') format('woff2'),
+        
+ 
+  }
+  .logo{
+    mix-blend-mode:multiply;    
+  }

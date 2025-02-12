@@ -1,0 +1,47 @@
+name : blog workfllow
+
+
+on:
+ push:
+   branches:
+    - main
+
+jobs:
+  check-changes:
+   runs-on: ubuntu-latest
+   outputs:
+     client_changed: ${{ steps.client_changed.outputes.clients}}
+     server_changed: ${{ steps.server_changed.outputes.clients}}
+   steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Check for chenges in client
+      id:   client_changed
+      uses: dorny/paths-filter@v3
+      with:
+       filters: 'client/**'
+       
+
+    - name: Check for chenges in server
+      id:   server_changed
+      uses: dorny/paths-filter@v3
+      with:
+       filters: 'server/**'
+       
+  client:
+    needs: check-changes
+    runs-on: ubuntu-latest
+    if: needs.check-changes.outputes.client_changed =='true'
+    steps:
+      - name: Nice
+        run: echo "client has chnaged"
+  
+
+        server:
+          needs: check-changes
+          runs-on: ubuntu-latest
+          if: needs.check-changes.outputes.server_changed =='true'
+          steps:
+            - name: Nice
+              run: echo "server has chnaged"
