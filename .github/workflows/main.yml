@@ -29,9 +29,7 @@ jobs:
       id:   server_changed
       uses: dorny/paths-filter@v3
       with:
-       filters: 
-          server:
-           - 'server/**'
+       filters: 'server/**'
        
   client:
     needs: check-changes
