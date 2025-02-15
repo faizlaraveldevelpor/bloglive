@@ -57,7 +57,7 @@ jobs:
                  
      - name: ssh and deploy
        run: |   
-          cd ../
+          
           ssh -T -i root@147.93.104.143
           cd /root/blog      
           sudo docker pull faizansari2025/blog-client
@@ -90,7 +90,7 @@ jobs:
             - name: ssh and deploy
 
               run: |
-               cd ../
+               
                ssh -T -i root@147.93.104.143
                cd /root/blog
                sudo docker pull faizansari2025/blog-server
