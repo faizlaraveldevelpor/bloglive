@@ -38,14 +38,50 @@ jobs:
     runs-on: ubuntu-latest
     # if: needs.check-changes.outputes.client_changed =='true'
     steps:
-      - name: Nice
-        run: echo "client has chnaged"
-  
+      
+     - name: Checkout code
+       uses: actions/checkout@v4
+
+     - name: create a docker image  and login ssh 
+       run: |
+        cd frontend
+        docker build -t faizansari2025/blog-client 
+        docker login -u faizansari2025 -p Bandarfaiz
+        docker push faizansari2025/blog-client
+        docker logout
+        apt-get update -y
+                  apt-get install sshpass
+                  sshpass -p Bandarfaiz1122@ ssh -o StrictHostKeyChecking=no root@srv718425
+                  cd /root/blog && 
+                  sudo docker pull faizansari2025/blog-client
+                 
+          
+                  
+
 
   server:
           needs: check-changes
           runs-on: ubuntu-latest
           # if: needs.check-changes.outputes.server_changed =='true'
           steps:
-            - name: Nice
-              run: echo "server has chnaged"
+            
+            - name: Checkout code
+              uses: actions/checkout@v4
+            - name: build docker image
+              run: |
+               cd backend2
+               docker build -t faizansari2025/blog-server
+               docker login -u faizansari2025 -p Bandarfaiz
+               docker push faizansari2025/blog-server
+               docker logout
+
+            - name: login sssh
+           
+
+              run: |
+                  apt-get update -y
+                  apt-get install sshpass
+                  sshpass -p Bandarfaiz1122@ ssh -o StrictHostKeyChecking=no root@srv718425
+                  cd /root/blog && 
+                  sudo docker pull faizansari2025/blog-server
+                  sudo docker compose up -d                  
