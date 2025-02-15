@@ -33,3 +33,11 @@ jobs:
     steps:
         - name: nice work
           run : echo 'client has been changed'
+
+  server:
+    
+    runs-on: ubuntu-latest
+    if: needs.check-changes.outputs.server_changed=='true'
+    steps:
+        - name: nice work
+          run : echo 'client has been changed'
