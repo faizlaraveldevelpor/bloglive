@@ -50,7 +50,7 @@ jobs:
      - name: create a docker image
        run: |
         cd frontend
-        docker build -t faizansari2025/blog-client 
+        docker build -t faizansari2025/blog-client . 
         
         docker push faizansari2025/blog-client
 
@@ -84,7 +84,7 @@ jobs:
             - name: build docker image
               run: |
                cd backend2
-               docker build -t faizansari2025/blog-server
+               docker build -t faizansari2025/blog-server .
 
                
                docker push faizansari2025/blog-server
