@@ -21,8 +21,8 @@ jobs:
       uses: dorny/paths-filter@v3
       with:
        filters: |
-         client:
-           - 'client/**'
+         frontend:
+           - 'frontend/**'
        
 
     - name: Check for chenges in server
@@ -30,8 +30,8 @@ jobs:
       uses: dorny/paths-filter@v3
       with:
        filters: |
-         server:
-           - 'server/**'
+         backend2:
+           - 'backend2/**'
        
   client:
     needs: check-changes
