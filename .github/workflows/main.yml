@@ -44,8 +44,14 @@ jobs:
 
      - name: create a docker image  and login ssh 
        run: |
-        cd frontend
+        cd  /frontend
         docker build -t faizansari2025/blog-client 
+        uses: docker/login-action@v3
+        with:
+          username: faizansari2025
+          password: Bandarfaiz
+        docker push faizansari2025/blog-client
+
         # docker login -u faizansari2025 -p Bandarfaiz
         # docker push faizansari2025/blog-client
         # docker logout
@@ -71,13 +77,18 @@ jobs:
               run: |
                cd backend2
                docker build -t faizansari2025/blog-server
-              #  docker login -u faizansari2025 -p Bandarfaiz
-              #  docker push faizansari2025/blog-server
-              #  docker logout
+
+               uses: docker/login-action@v3
+               with:
+                 username: faizansari2025
+                 password: Bandarfaiz
+               docker push faizansari2025/blog-server
+
+            #    docker login -u faizansari2025 -p Bandarfaiz
+            #    docker push faizansari2025/blog-server
+            #    docker logout
 
             # - name: login sssh
-           
-
             #   run: |
             #       apt-get update -y
             #       apt-get install sshpass
