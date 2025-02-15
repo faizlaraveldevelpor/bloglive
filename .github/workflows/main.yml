@@ -49,7 +49,7 @@ jobs:
           password: Bandarfaiz
      - name: create a docker image
        run: |
-        cd  /frontend
+        cd  '/frontend'
         docker build -t faizansari2025/blog-client 
         
         docker push faizansari2025/blog-client
@@ -83,7 +83,7 @@ jobs:
 
             - name: build docker image
               run: |
-               cd /backend2
+               cd '/backend2'
                docker build -t faizansari2025/blog-server
 
                
