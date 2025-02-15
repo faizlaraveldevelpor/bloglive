@@ -9,9 +9,9 @@ on:
 jobs:
   check-changes:
    runs-on: ubuntu-latest
-   outputs:
-     client_changed: ${{ steps.client_changed.outputes.client}}
-     server_changed: ${{ steps.server_changed.outputes.server}}
+  #  outputs:
+  #    client_changed: ${{ steps.client_changed.outputes.client}}
+  #    server_changed: ${{ steps.server_changed.outputes.server}}
    steps:
     - name: Checkout code
       uses: actions/checkout@v4
@@ -36,7 +36,7 @@ jobs:
   client:
     needs: check-changes
     runs-on: ubuntu-latest
-    if: needs.check-changes.outputes.client_changed =='true'
+    # if: needs.check-changes.outputes.client_changed =='true'
     steps:
       - name: Nice
         run: echo "client has chnaged"
@@ -45,7 +45,7 @@ jobs:
   server:
           needs: check-changes
           runs-on: ubuntu-latest
-          if: needs.check-changes.outputes.server_changed =='true'
+          # if: needs.check-changes.outputes.server_changed =='true'
           steps:
             - name: Nice
               run: echo "server has chnaged"
