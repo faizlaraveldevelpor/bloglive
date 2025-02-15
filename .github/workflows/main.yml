@@ -8,8 +8,8 @@ jobs:
   check-chnages:
     runs-on: ubuntu-latest
     outputs:
-      client_changed: "${{stpes.client_changed.outputs.client_changed}}"
-      server_changed: "${{stpes. server_changed.outputs.server_changed}}"
+      client_changed: ${{steps.client_changed.outputs.client_changed}}
+      server_changed: ${{steps.server_changed.outputs.server_changed}}
     steps:
       - name: checkout code 
         uses: actions/checkout@v4
