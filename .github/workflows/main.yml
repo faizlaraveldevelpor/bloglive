@@ -10,8 +10,8 @@ jobs:
   check-changes:
    runs-on: ubuntu-latest
    outputs:
-     client_changed: ${{ steps.client_changed.outputes.clients}}
-     server_changed: ${{ steps.server_changed.outputes.clients}}
+     client_changed: ${{ steps.client_changed.outputes.client}}
+     server_changed: ${{ steps.server_changed.outputes.server}}
    steps:
     - name: Checkout code
       uses: actions/checkout@v4
