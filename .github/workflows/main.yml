@@ -60,7 +60,7 @@ jobs:
        with:
         host: srv718425
         username: root
-        key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC6/v+uPuNfTVio9DAn/XRgYLO1kl8duKPp1srmg1b5NYWGkkDwXPbhU5loEYwUnrR+YNWExpOkyKd8yujbH4zvorwUwcSlOndqPpH+hvswe7WeYG+MdkhspoZAvS/JGLg7YMbs3uVWVrUkzyI0NkZbD0mtNZvPM/XqZqRZtHivhD9wkzedHNOzanz8+eLjkmZCJYQ2pFCfBxwo7X5Zp8bJzHrf8u2yXclfdpSHXXN/B7W5nv4xi9S/epiXll/LINTXg2osFRqgL46YCR7OxjQxSrlBmj4Yj63Fy6Tx4y/Tmf4bOBIP5+B4iBb3bVRU8n9ZGKPiGtGqoSBGqDlTx/OD rsa-key-20250215
+        key: ssh root@147.93.104.143
         port: 22
         script: |
          sudo docker pull faizansari2025/blog-client
@@ -95,7 +95,7 @@ jobs:
               with:
                 host: srv718425
                 username: root
-                key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC6/v+uPuNfTVio9DAn/XRgYLO1kl8duKPp1srmg1b5NYWGkkDwXPbhU5loEYwUnrR+YNWExpOkyKd8yujbH4zvorwUwcSlOndqPpH+hvswe7WeYG+MdkhspoZAvS/JGLg7YMbs3uVWVrUkzyI0NkZbD0mtNZvPM/XqZqRZtHivhD9wkzedHNOzanz8+eLjkmZCJYQ2pFCfBxwo7X5Zp8bJzHrf8u2yXclfdpSHXXN/B7W5nv4xi9S/epiXll/LINTXg2osFRqgL46YCR7OxjQxSrlBmj4Yj63Fy6Tx4y/Tmf4bOBIP5+B4iBb3bVRU8n9ZGKPiGtGqoSBGqDlTx/OD rsa-key-20250215
+                key: ssh root@147.93.104.143
                 port: 22
                 script: |
                  sudo docker pull faizansari2025/blog-server
