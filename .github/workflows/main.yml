@@ -60,7 +60,7 @@ jobs:
        with:
         host: srv718425
         username: root
-        key: rsa-key-20250215
+        key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC6/v
         port: 22
         script: |
          sudo docker pull faizansari2025/blog-client
@@ -95,7 +95,7 @@ jobs:
               with:
                 host: srv718425
                 username: root
-                key: rsa-key-20250215
+                key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC6/v
                 port: 22
                 script: |
                  sudo docker pull faizansari2025/blog-server
