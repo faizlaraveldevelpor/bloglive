@@ -18,13 +18,18 @@ jobs:
         id:  client_changed
         uses: dorny/paths-filter@v3 
         with:
-          filters: 'frontend/**'
+          filters: |
+            frontend:
+              'frontend/**'
 
       - name: check changes
         id:  server_changed
         uses: dorny/paths-filter@v3 
         with:
-            filters: 'backend2/**'
+            filters: |
+            backend2:
+              'backend2/**'
+              
           
   client:
     
