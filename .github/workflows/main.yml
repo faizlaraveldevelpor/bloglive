@@ -1,51 +1,35 @@
-name : blog workfllow
-
-
+name: swiggy-workflow
 on:
- push:
-   branches:
-    - main
+  push:
+    branches:
+    -  main
 
 jobs:
-  check-changes:
-   runs-on: ubuntu-latest
-   outputs:
-     client_changed: ${{ steps.client_changed.outputes.clients}}
-     server_changed: ${{ steps.server_changed.outputes.clients}}
-   steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
-
-    - name: Check for chenges in client
-      id:   client_changed
-      uses: dorny/paths-filter@v3
-      with:
-       filters: |
-         client:
-           - 'client/**'
-       
-
-    - name: Check for chenges in server
-      id:   server_changed
-      uses: dorny/paths-filter@v3
-      with:
-       filters: |
-         server:
-           - 'server/**'
-       
-  client:
-    needs: check-changes
+  check-chnages:
     runs-on: ubuntu-latest
-    if: needs.check-changes.outputes.client_changed =='true'
+    outputs:
+      client_changed: ${{stpes.client_changed.outputs.client_changed}}
+      server_changed: ${{stpes. server_changed.outputs.server_changed}}
     steps:
-      - name: Nice
-        run: echo "client has chnaged"
-  
+      - name: checkout code 
+        uses: actions/checkout@v4
 
-  server:
-          needs: check-changes
-          runs-on: ubuntu-latest
-          if: needs.check-changes.outputes.server_changed =='true'
-          steps:
-            - name: Nice
-              run: echo "server has chnaged"
+      - name: check changes
+        id:  client_changed
+        uses: dorny/paths-filter@v3 
+        with:
+          filters: 'frontend/**'
+
+      - name: check changes
+        id:  server_changed
+        uses: dorny/paths-filter@v3 
+        with:
+            filters: 'backend2/**'
+          
+  client:
+    
+    runs-on: ubuntu-latest
+    if: needs.check-changes.outputs.client_changed=='true'
+    steps:
+        - name: nice work
+          run : echo 'client has been changed'
