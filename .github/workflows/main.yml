@@ -60,7 +60,7 @@ jobs:
        with:
         host: srv718425
         username: root
-        key: id_ed25519
+        key: .ssh/id_ed25519
         port: 22
         script: |
          sudo docker pull faizansari2025/blog-client
@@ -95,7 +95,7 @@ jobs:
               with:
                 host: srv718425
                 username: root
-                key: id_ed25519
+                key: .ssh/id_ed25519
                 port: 22
                 script: |
                  sudo docker pull faizansari2025/blog-server
