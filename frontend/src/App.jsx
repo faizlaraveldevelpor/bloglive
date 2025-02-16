@@ -58,6 +58,7 @@ function App() {
         <Route path='/' element={<User_private_routes/>}>
         <Route path='/User/profile' element={<User_profile_page/>}/>
         <Route path='/draft' element={<Show_draft/>}/>
+        <Route path='/change' element={<h1>Allah</h1>}/>
         </Route>
    
       
