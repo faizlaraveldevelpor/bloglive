@@ -55,8 +55,8 @@ jobs:
         sudo apt-get update -y
              sudo apt-get install sshpass
              sudo sshpass -p Bandarfaiz1122@ ssh -o StrictHostKeyChecking=no root@srv718425.hstgr.cloud
-              cd /root/blog
-             sudo docker pull faizansari2025/blog-client
+             
+             sudo docker pull faizansari2025/blog-client &&  cd /root/blog
              sudo compose up -d
               sudo reboot
 
@@ -87,8 +87,8 @@ jobs:
                sudo apt-get update -y
                sudo apt-get install sshpass
                sudo sshpass -p Bandarfaiz1122@ ssh -o StrictHostKeyChecking=no root@srv718425.hstgr.cloud
-                cd /root/blog
-               sudo docker pull faizansari2025/blog-server
+              
+               sudo docker pull faizansari2025/blog-server &&   cd /root/blog
                sudo compose up -d
                sudo reboot
                
