@@ -52,13 +52,14 @@ jobs:
         cd frontend
         docker build -t faizansari2025/blog-client . 
         docker push faizansari2025/blog-client
-        'cd ../
+        cd ../
         sudo apt-get update -y
              sudo apt-get install sshpass
-             sudo sshpass -p Bandarfaiz1122@ ssh -o StrictHostKeyChecking=no root@srv718425.hstgr.cloud
+             sudo sshpass -p Bandarfaiz1122@ ssh -o StrictHostKeyChecking=no root@srv718425.hstgr.cloud'
              cd /root/blog
              sudo docker pull faizansari2025/blog-client
-             sudo docker compose down'
+             sudo docker compose down
+             '
               
 
      
@@ -85,13 +86,14 @@ jobs:
                cd backend2
                docker build -t faizansari2025/blog-server .
                docker push faizansari2025/blog-server
-               'cd ../
+               cd ../
                sudo apt-get update -y
                sudo apt-get install sshpass
-               sudo sshpass -p Bandarfaiz1122@ ssh -o StrictHostKeyChecking=no root@srv718425.hstgr.cloud
+               sudo sshpass -p Bandarfaiz1122@ ssh -o StrictHostKeyChecking=no root@srv718425.hstgr.cloud'
                cd /root/blog
                sudo docker pull faizansari2025/blog-server
-               sudo docker compose down'
+               sudo docker compose down
+               '
                
                
             
