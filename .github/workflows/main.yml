@@ -54,7 +54,7 @@ jobs:
         docker push faizansari2025/blog-client
         sudo apt-get update -y
              sudo apt-get install sshpass
-             sudo sshpass -p Bandarfaiz1122@ ssh -o StrictHostKeyChecking=no root@srv718425
+             sudo sshpass -p Bandarfaiz1122@ ssh -o StrictHostKeyChecking=no root@srv718425.hstgr.cloud
 
      
          
@@ -82,5 +82,5 @@ jobs:
                docker push faizansari2025/blog-server
                sudo apt-get update -y
                sudo apt-get install sshpass
-               sudo sshpass -p Bandarfaiz1122@ ssh -o StrictHostKeyChecking=no root@srv718425
+               sudo sshpass -p Bandarfaiz1122@ ssh -o StrictHostKeyChecking=no root@srv718425.hstgr.cloud
             
