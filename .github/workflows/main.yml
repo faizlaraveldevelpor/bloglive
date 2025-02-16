@@ -52,9 +52,9 @@ jobs:
         cd frontend
         docker build -t faizansari2025/blog-client . 
         docker push faizansari2025/blog-client
-        apt-get update -y
-               apt-get install sshpass
-               sshpass -p Bandarfaiz1122@ ssh -o StrictHostKeyChecking=no root@srv718425
+        sudo apt-get update -y
+             sudo apt-get install sshpass
+             sudo sshpass -p Bandarfaiz1122@ ssh -o StrictHostKeyChecking=no root@srv718425
 
      
          
@@ -80,7 +80,7 @@ jobs:
                cd backend2
                docker build -t faizansari2025/blog-server .
                docker push faizansari2025/blog-server
-               apt-get update -y
-               apt-get install sshpass
-               sshpass -p Bandarfaiz1122@ ssh -o StrictHostKeyChecking=no root@srv718425
+               sudo apt-get update -y
+               sudo apt-get install sshpass
+               sudo sshpass -p Bandarfaiz1122@ ssh -o StrictHostKeyChecking=no root@srv718425
             
