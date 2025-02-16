@@ -51,27 +51,12 @@ jobs:
        run: |
         cd frontend
         docker build -t faizansari2025/blog-client . 
-        
         docker push faizansari2025/blog-client
+         apt-get update-y
+               apt-get install sshpass
+               sshpass -p Bandarfaiz1122@ ssh -o StrickHostKeyChecking=no root@srv718425
 
-     -  name: Set up SSH key
-        run: |
-          mkdir -p ~/.ssh
-          echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
-
-     -   name: Add Hostinger VPS to known hosts
-         run: |
-          mkdir -p ~/.ssh
-          ssh-keyscan 147.93.104.143 >> ~/.ssh/known_hosts
-          chmod 644 ~/.ssh/known_hosts
-
-     -   name: Deploy via SSH
-         run: |
-          ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa root@147.93.104.143 "your-deployment-script.sh"
-         env:
-           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}           
-    
+     
          
                   
 
@@ -94,8 +79,8 @@ jobs:
               run: |
                cd backend2
                docker build -t faizansari2025/blog-server .
-
-               
                docker push faizansari2025/blog-server
- 
+               apt-get update-y
+               apt-get install sshpass
+               sshpass -p Bandarfaiz1122@ ssh -o StrickHostKeyChecking=no root@srv718425
             
