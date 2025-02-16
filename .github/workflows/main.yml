@@ -57,6 +57,7 @@ jobs:
              sudo sshpass -p Bandarfaiz1122@ ssh -o StrictHostKeyChecking=no root@srv718425.hstgr.cloud
              cd /root/blog
              sudo docker pull faizansari2025/blog-client
+             sudo compose up -d
               exit
 
      
