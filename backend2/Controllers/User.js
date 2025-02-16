@@ -80,14 +80,17 @@ let login_user=req.user
 let check_email=validate(email)
 
 
-if (req.body.name!==""|| req.body.email!==""|| req.body.password!==""||req.body.avtar!=="") {
+
+
  
 let find_user=await user_model.findById(login_user) 
-let public_id=find_user.public_id
+let public_id=find_user?.public_id
 if (avtar) {
     console.log("faiz");
     
-       let delete_image= await cloudinary.v2.uploader.destroy(public_id)
+       if (public_id) {
+        let delete_image= await cloudinary.v2.uploader.destroy(public_id)
+       }
        console.log(delete_image);
        console.log(public_id);
        
@@ -119,7 +122,7 @@ res.status(200).json({success:true,"message":"profile updated successfully"})
 
 
     
-}
+
 } catch (error) {
     console.log(error);
     
