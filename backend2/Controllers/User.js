@@ -91,8 +91,8 @@ if (avtar) {
        if (public_id) {
         let delete_image= await cloudinary.v2.uploader.destroy(public_id)
        }
-       console.log(delete_image);
-       console.log(public_id);
+       
+       
        
   
         let url=`data:image/jpg;base64,${avtar.buffer.toString("base64")}`
