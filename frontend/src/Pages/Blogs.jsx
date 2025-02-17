@@ -8,7 +8,7 @@ function Blogs() {
 
 <div className="max-w-[1300px]">
 <Helmet>
-     <title>Home page</title>
+     <title>blog.mfaizansari.tech/</title>
      <meta name="description" content="faiz ansari description" />
  </Helmet>
 <div className="flex flex-col items-center ">

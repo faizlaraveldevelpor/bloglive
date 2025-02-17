@@ -13,7 +13,7 @@ services:
     ports:
       - 3000:3000
     environment:
-      - DB_URL= mongodb+srv://faizansari2025:Bandarfaiz@cluster0.8pwiy.mongodb.net/bloglive2
+      - DB_URL=mongodb://db/bloglive
       - TOKEN="12256447336376@#@@$$55454544@@$#6%^599((*(&^%)))"
       -  PORT=3000
     depends_on:
@@ -28,9 +28,9 @@ services:
     #  MONGO_INITDB_ROOT_PASSWORD: admin
    
     volumes:
-      - mongodbdata:/data/db
+      - mongo_db:/data/db
 
 
 volumes:
-   mongodbdata:
-     driver: local   
+      mongo_db: 
+        external: true
