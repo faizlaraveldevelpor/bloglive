@@ -3,7 +3,7 @@ import { blogs_api_data, cetagory_api_data, login_user_sl_fn, single_blog_data_f
 
 export let Api=createApi({
     reducerPath:"api",
-    baseQuery:fetchBaseQuery({baseUrl:"https://blogapi.mfaizansari.tech:3000/api/v1/",credentials:"include"}),tagTypes:["user","blog","like","comment","cetagory"],keepUnusedDataFor:24*60*60*1000,
+    baseQuery:fetchBaseQuery({baseUrl:"https://blogapi.mfaizansari.tech/api/v1/",credentials:"include"}),tagTypes:["user","blog","like","comment","cetagory"],keepUnusedDataFor:24*60*60*1000,
     
     endpoints:(builder)=>({
         register:builder.mutation({
