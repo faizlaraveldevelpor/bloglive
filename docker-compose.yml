@@ -1,7 +1,13 @@
+networks:
+      mern-stack:
+        external: true
 services:
  frontend:
     image: faizansari2025/blog-client
     container_name: react
+    networks:
+      - mern-stack
+       
     ports:
       - 4173:4173
  
@@ -10,6 +16,9 @@ services:
  server:
     image: faizansari2025/blog-server
     container_name: nodejs
+    networks:
+      - mern-stack
+   
     ports:
       - 3000:3000
     environment:
@@ -21,6 +30,9 @@ services:
  db:
     image: mongo
     container_name: mongodb
+    networks:
+      - mern-stack
+        
     ports:
       - 27017:27017
     # environment:
