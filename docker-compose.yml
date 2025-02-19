@@ -5,6 +5,7 @@ services:
  frontend:
     image: faizansari2025/blog-client
     container_name: react
+    restart: always
     networks:
       - mern-stack
        
@@ -16,6 +17,7 @@ services:
  server:
     image: faizansari2025/blog-server
     container_name: nodejs
+    restart: always
     networks:
       - mern-stack
    
@@ -30,6 +32,7 @@ services:
  db:
     image: mongo
     container_name: mongodb
+    restart: always
     networks:
       - mern-stack
         
@@ -40,8 +43,9 @@ services:
     #  MONGO_INITDB_ROOT_PASSWORD: admin
    
     volumes:
-      - mongo_db:/data/db
+      - mongodbdata:/data/db
 
 
 volumes:
-      mongo_db: {}
+      mongodbdata:
+        driver: local
