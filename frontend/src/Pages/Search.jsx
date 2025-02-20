@@ -28,7 +28,7 @@ function Search() {
   data?.find_blog.map((data)=>{
     return(
       <>
-    <Link to={`/single/blog/${data._id}${data?.Slug?data?.Slug:"Slug"}`}>
+    <Link to={`/single/blog/${data._id}/${data?.Slug?data?.Slug:"Slug"}`}>
     <div className="flex items-center gap-4">
         <div className="mb-5">
           <img src={data?.image[0]} alt="" className="w-[150px] border" />
