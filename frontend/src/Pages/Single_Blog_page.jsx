@@ -3,7 +3,7 @@ import { MdMessage } from "react-icons/md";
 
 
 import {useNavigate, useParams} from'react-router-dom'
-import {  useSingle_blogQuery } from "../Redux/Api";
+import {  useLogin_userQuery, useSingle_blogQuery } from "../Redux/Api";
 import { useDispatch } from "react-redux";
 import { update_blog } from "../Redux/api_data_slice";
 import { comment_fnc } from "../Redux/ALL_moduls._Slice";
@@ -16,6 +16,7 @@ let local_storage=JSON.parse(localStorage.getItem("user"))||[]
   let {id}=useParams()
  
   let {data}=useSingle_blogQuery(id)
+  let {data:login_user}=useLogin_userQuery()
   
   
 console.log(data);
@@ -55,8 +56,8 @@ let dispacth=useDispatch()
       </h1>
       <div className="flex justify-between items-center mt-6 px-8 md:px-0 w-full ">
       <div className="">
-      <img src={data?.blog_get?.image} alt="" className="w-[50px] rounded-full h-[50px]" />
-      <h5 className="font-semibold">{local_storage?.name}</h5>
+      <img src={login_user?.user?.image} alt="" className="w-[50px] rounded-full h-[50px]" />
+      <h5 className="font-semibold">{login_user?.user?.name}</h5>
       
       </div>
       <div>
