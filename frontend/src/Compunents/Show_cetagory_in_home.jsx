@@ -87,6 +87,10 @@ useEffect(()=>{
                          <span>
                           <h3 className="mt-5 font-semibold text-[15px] pl-2 mb-5">{data?.blogs[2]?.title}</h3>
                          </span></Link>
+                       <Link to={`/single/blog/${data?.blogs[7]?._id}/${data?.blogs[7]?.Slug?data?.blogs[4]?.Slug:"Slug"}`}>  <img src={data?.blogs[2]?.image} alt="" className="md:ml-2 lg:w-[500px] md:w-[300px] w-[300px]" />
+                         <span>
+                          <h3 className="mt-5 font-semibold text-[15px] pl-2 mb-5">{data?.blogs[7]?.title}</h3>
+                         </span></Link>
                         </div>
                       </div>
                       </div>
