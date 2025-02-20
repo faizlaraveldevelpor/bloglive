@@ -42,7 +42,7 @@ useEffect(()=>{
                       <div key={i}>
                         <h3 className="border-b border-black pb-2 font-bold text-[25px] border-t-4  pt-5">{data?.cetagory}</h3>
                       <div className="md:flex  mt-7">
-                      <div className=" mb-10 md:w-[60%] break-all ">
+                      <div className="  md:w-[60%] break-all ">
                        <Link to={`/single/blog/${data?.blogs[0]?._id}/${data?.blogs[0]?.Slug?data?.blogs[0]?.Slug:"Slug"}`}>
                        <img src={data?.blogs[0]?.image} alt="" className="md:w-[360px] lg:w-[800px] w-[350px]" />
                         <span>
@@ -50,7 +50,7 @@ useEffect(()=>{
                          </span>
                        </Link>
                          <div className="md:block hidden">
-                          <div className="flex gap-12  mb-20  ">
+                          <div className="flex gap-12    ">
                         <Link to={`/single/blog/${data?.blogs[3]?._id}/${data?.blogs[3]?.Slug?data?.blogs[3]?.Slug:"Slug"}`}>  <div className=" border lg:w-[300px] md:w-[150px] lg:h-[200px]  md:h-[100px] ">
                               <span className="break-all"> <img src={data?.blogs[3]?.image} alt="" className="  w-full h-full " /></span>
                               <h3 className=" ml-4 text-[16px] font-semibold">{data?.blogs[3]?.title.substring(0,50)}</h3>
