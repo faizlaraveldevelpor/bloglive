@@ -51,11 +51,11 @@ let dispacth=useDispatch()
     <div className="break-all		">
       <h1 className="font-bold text-[30px]">
       {data&&
-      data.blog_get?.title}
+      data?.blog_get?.title}
       </h1>
       <div className="flex justify-between items-center mt-6 px-8 md:px-0 w-full ">
       <div className="">
-      <img src={data.blog_get?.image} alt="" className="w-[50px] rounded-full h-[50px]" />
+      <img src={data?.blog_get?.image} alt="" className="w-[50px] rounded-full h-[50px]" />
       <h5 className="font-semibold">{local_storage?.name}</h5>
       
       </div>
