@@ -50,7 +50,7 @@ useEffect(()=>{
                          </span>
                        </Link>
                          <div className="md:block hidden">
-                          <div className="flex gap-12    ">
+                          <div className="flex gap-12  mb-24  ">
                         <Link to={`/single/blog/${data?.blogs[3]?._id}/${data?.blogs[3]?.Slug?data?.blogs[3]?.Slug:"Slug"}`}>  <div className=" border lg:w-[300px] md:w-[150px] lg:h-[200px]  md:h-[100px] ">
                               <span className="break-all"> <img src={data?.blogs[3]?.image} alt="" className="  w-full h-full " /></span>
                               <h3 className=" ml-4 text-[16px] font-semibold">{data?.blogs[3]?.title.substring(0,50)}</h3>
