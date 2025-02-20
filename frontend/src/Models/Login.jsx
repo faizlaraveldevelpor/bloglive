@@ -236,7 +236,7 @@ setotp("")
  <span className="flex  flex-col w-full">
  <label htmlFor="" className="mb-2 font-bold text-[#737373] text-[13px]  relative right-12 " >Password</label>
 <span>
-<input type="text" name="" id=""  className=" border outline-none h-12 w-[100%]  text-[#737373]  rounded-r-sm  font-semibold relative border-[#737373] px-4" value={login_data.password} onChange={(e)=>setlogindata((perv)=>({...perv,password:e.target.value}))} placeholder="Enter your email"/>
+<input type="password" name="" id=""  className=" border outline-none h-12 w-[100%]  text-[#737373]  rounded-r-sm  font-semibold relative border-[#737373] px-4" value={login_data.password} onChange={(e)=>setlogindata((perv)=>({...perv,password:e.target.value}))} placeholder="Enter your email"/>
 
 </span>
  </span>
