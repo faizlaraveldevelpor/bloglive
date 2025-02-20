@@ -81,15 +81,15 @@ useEffect(()=>{
                         <div className="md:border-l-2  md:ml-2 md:pl-2  md:w-[40%] break-all ">
                        <Link to={`/single/blog/${data?.blogs[1]?._id}/${data?.blogs[1]?.Slug?data?.blogs[4]?.Slug:"Slug"}`}>  <img src={data?.blogs[1]?.image} alt="" className="md:ml-2 lg:w-[500px] md:w-[300px] w-[300px]" />
                          <span>
-                          <h3 className="mt-5 font-semibold text-[15px] pl-2 mb-5">{data?.blogs[1]?.title}</h3>
+                          <h3 className="mt-5 font-semibold text-[15px] pl-2 mb-5">{data?.blogs[1]?.title.substring(0,70)}</h3>
                          </span></Link>
                        <Link to={`/single/blog/${data?.blogs[2]?._id}/${data?.blogs[2]?.Slug?data?.blogs[4]?.Slug:"Slug"}`}>  <img src={data?.blogs[2]?.image} alt="" className="md:ml-2 lg:w-[500px] md:w-[300px] w-[300px]" />
                          <span>
-                          <h3 className="mt-5 font-semibold text-[15px] pl-2 mb-5">{data?.blogs[2]?.title}</h3>
+                          <h3 className="mt-5 font-semibold text-[15px] pl-2 mb-5">{data?.blogs[2]?.title.substring(0,70)}</h3>
                          </span></Link>
                        <Link to={`/single/blog/${data?.blogs[7]?._id}/${data?.blogs[7]?.Slug?data?.blogs[4]?.Slug:"Slug"}`}>  <img src={data?.blogs[2]?.image} alt="" className="md:ml-2 lg:w-[500px] md:w-[300px] w-[300px]" />
                          <span>
-                          <h3 className="mt-5 font-semibold text-[15px] pl-2 mb-5">{data?.blogs[7]?.title}</h3>
+                          <h3 className="mt-5 font-semibold text-[15px] pl-2 mb-5">{data?.blogs[7]?.title.substring(0,70)}</h3>
                          </span></Link>
                         </div>
                       </div>
